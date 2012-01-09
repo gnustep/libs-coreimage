@@ -26,3 +26,9 @@
    Boston, MA 02110-1301, USA.
 */
 
+#import "CIColor.h"
+
+@implementation CIColor
+
+@end
+

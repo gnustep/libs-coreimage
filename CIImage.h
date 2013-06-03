@@ -2,10 +2,10 @@
 /* 
    CIImage.h
 
-   Copyright (C) 2012 Free Software Foundation, Inc.
+   Copyright (C) 2013 Free Software Foundation, Inc.
 
-   Author: Amr Aboelela <amraboelela@gmail.com>
-   Date: January, 2012
+   Author: Gregory Casamento <greg.casamento@gmail.com>
+   Date: June 3, 2013
 
    This file is part of CoreImage.
 
@@ -25,4 +25,30 @@
    Free Software Foundation, 51 Franklin Street, Fifth Floor,
    Boston, MA 02110-1301, USA.
 */
+
++ (CIImage *)emptyImage;
+
++ (CIImage *)imageWithBitmapData:(NSData *)data
+                     bytesPerRow:(size_t)bpr 
+			    size:(CGSize)size 
+	                  format:(CIFormat)f 
+		      colorSpace:(CGColorSpaceRef)cs;
+
++ (CIImage *)imageWithCGImage:(CGImageRef)image;
+
++ (CIImage *)imageWithCGImage:(CGImageRef)image 
+                      options:(NSDictionary *)dict;
+
++ (CIImage *)imageWithCGLayer:(CGLayerRef)layer;
+
++ (CIImage *)imageWithCGLayer:(CGLayerRef)layer options:(NSDictionary *)d;
+
++ (CIImage *)imageWithColor:(CIColor *)color;
+
++ (CIImage *)imageWithContentsOfURL:(NSURL *)url options:(NSDictionary *)d;
+
++ (CIImage *)imageWithCVImageBuffer:(CVImageBufferRef)imageBuffer;
+
++ (CIImage *)imageWithCVImageBuffer:(CVImageBufferRef)imageBuffer 
+			    options:(NSDictionary *)dict;
 
